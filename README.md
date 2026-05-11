@@ -101,7 +101,7 @@ cd FoodieHub
 ## 3. Create Virtual Environment
 
 ```bash
-python -m venv venv
+python -m venv .venv
 ```
 
 ---
@@ -192,25 +192,6 @@ urlpatterns += static(settings.MEDIA_URL,
 - Dosa
 - Biryani
 - Momos
-
----
-
-# 📸 Screenshots
-
-## Home Page
-Modern landing page with food cards.
-
-## Login Page
-Responsive login form.
-
-## Signup Page
-Account creation with Gmail support.
-
-## Cart Section
-Improved cart UI.
-
-## Profile Page
-Displays user details.
 
 ---
 
