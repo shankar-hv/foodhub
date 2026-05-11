@@ -1,0 +1,65 @@
+{% extends 'app/base.html' %}
+
+{% block content %}
+
+<div class="hero-section shadow">
+
+    <h1 class="hero-title">
+        Delicious Food Delivered Fast 🍕
+    </h1>
+
+    <p class="hero-subtitle">
+        Order your favorite meals anytime.
+    </p>
+
+</div>
+
+<div class="row">
+
+{% for food in foods %}
+
+<div class="col-md-4 mb-4">
+
+    <div class="card food-card shadow-sm h-100">
+
+        {% if food.image %}
+
+        <img
+            src="{{ food.image.url }}"
+            class="card-img-top food-image"
+        >
+
+        {% endif %}
+
+        <div class="card-body">
+
+            <h3>
+                {{ food.name }}
+            </h3>
+
+            <p class="text-muted">
+                {{ food.category }}
+            </p>
+
+            <h4 class="price">
+                ₹{{ food.price }}
+            </h4>
+
+            <a
+                href="/food/{{ food.id }}/"
+                class="btn custom-btn mt-2"
+            >
+                View Details
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+{% endfor %}
+
+</div>
+
+{% endblock %}

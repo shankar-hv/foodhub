@@ -1,0 +1,35 @@
+{% extends 'app/base.html' %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-lg-7">
+        <div class="profile-card">
+            <div class="text-center mb-4">
+                <img src="https://ui-avatars.com/api/?name={{ user.username }}&background=ff512f&color=fff&size=140" class="rounded-circle shadow mb-3" alt="profile">
+                <h2 class="fw-bold">{{ user.username }}</h2>
+                <p class="text-muted">FoodApp Customer</p>
+            </div>
+
+            <div class="row text-center g-4">
+                <div class="col-md-6">
+                    <div class="bg-light rounded-4 p-4">
+                        <h5>Email Address</h5>
+                        <p class="mb-0">{{ user.email }}</p>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="bg-light rounded-4 p-4">
+                        <h5>Joined On</h5>
+                        <p class="mb-0">{{ user.date_joined|date:"d M Y" }}</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-5">
+                <a href="/my-orders/" class="btn custom-btn px-5">View Orders</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

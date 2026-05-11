@@ -1,0 +1,25 @@
+{% extends 'app/base.html' %}
+
+{% block content %}
+<div class="card auth-card shadow p-4">
+    <h1 class="text-center mb-4">Create Account</h1>
+
+    <form method="POST">
+        {% csrf_token %}
+
+        <div class="mb-3">
+            <input type="text" name="username" class="form-control form-control-lg" placeholder="Username" required>
+        </div>
+
+        <div class="mb-3">
+            <input type="email" name="email" class="form-control form-control-lg" placeholder="Gmail Address" required>
+        </div>
+
+        <div class="mb-4">
+            <input type="password" name="password" class="form-control form-control-lg" placeholder="Password" required>
+        </div>
+
+        <button class="btn custom-btn w-100 py-2">Signup</button>
+    </form>
+</div>
+{% endblock %}
